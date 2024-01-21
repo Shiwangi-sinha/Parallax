@@ -1,0 +1,160 @@
+body{
+    background: linear-gradient(black, rgb(71, 68, 68));
+    scroll-behavior: smooth;
+}
+
+.logo{
+    margin-left: 1%;
+}
+
+.header{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 5px 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header:hover{
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #FFAD00;
+    box-shadow: 0 4px 8px 0 #FFAD00, 0 6px 20px 0 #6e5f3f;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 10%;
+}
+
+nav{
+    height: 4vw;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    border-top-left-radius: 6px;
+    z-index: 10000;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:100px;
+    z-index: 1000;
+    mix-blend-mode: screen;
+    background: linear-gradient(to top, black, black);
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 45vw;
+    padding: 100px;
+    overflow: hidden;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#moon{
+    mix-blend-mode: screen;
+    height: 200px;
+    width: 200px;
+    margin-left: 50%;
+}
+
+#gate{
+    top: 20%;
+    height: 80%;
+    width: 125%;
+    z-index: 10;
+    transform: translateZ(0);
+    left:-19%;
+}
+
+#ghost{
+    mix-blend-mode: screen;
+    margin-left: 25%;
+    top: 45%;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+p{
+    font-size: 100px;
+    color: black;
+    font-weight: 800;
+    font-family: 'Creepster', system-ui;
+    position: relative;
+    text-align: center;
+}
+
+#ClockDial{
+    position: relative;
+    margin: auto;
+    height: 40rem;
+    width: 40rem;
+    background: url(./assets/dial.png) no-repeat;
+    background-size: 100%;
+}
+
+#hour, #minute, #second, #circle{
+    position: absolute;
+    background-color: black;
+    border: 1px;
+    transform-origin: bottom;
+}
+
+#hour{
+    height: 20%;
+    width: 2%;
+    left: 49.1%;
+    top: 30%;
+    border-radius: 3rem;
+    
+}
+
+#minute{
+    height: 27%;
+    width: 1.3%;
+    left: 49.1%;
+    top: 23%;
+    border-radius: 3rem;
+  
+}
+
+#second{
+    height: 29%;
+    width: 0.6%;
+    left: 49.5%;
+    top: 22%;
+    border-radius: 3rem;
+    
+}
+
+#circle{
+    border-radius: 100%;
+    height: 3.5%;
+    width: 3.5%;
+    top: 48%;
+    left: 48.3%;
+}
